@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+   <html>
+      <head>
+         <title>Grid layouts</title>
+         <style>
+               *{
+                   margin:0;
+                   padding:0;
+                   font-family:sans-serif;
+                   box-sizing:border-box;
+               }
+               /* body{
+                   height:100000000px;
+               } */
+               .navbar{
+                   background-color:#37383b;
+                   display:grid;
+                   text-align:center;
+                   place-items:center;
+               }
+               .navbar ul{
+                   position:sticky;
+                   list-style:none;
+               }
+               .navbar ul a{
+                   display:inline-block;
+                   padding:20px;
+                   text-decoration:none;
+                   color:#fff;
+                   font-size:auto;
+                   transition:8s ease-in-out;
+               }
+               .navbar li{
+                   padding:10px;
+                   background:transparent;
+                   color:#fff;
+                   border:1px solid aliceblue;
+                   font-weight:bold;
+                   font-size:18px;
+                   transition:1s ease-in-out;
+               }
+               /* .navbar button{
+                   padding:10px;
+                   background:transparent;
+                   color:#fff;
+                   border:1px solid aliceblue;
+                   font-weight:bold;
+                   font-size:18px;
+                   transition:1s ease-in-out;
+               } */
+               .navbar li:hover{
+                   color:#faf7f8;
+                   background-color:#ab969c;
+               }
+               .header{
+                   position:relative;
+                   background-image:url("https://wallpapers.com/images/hd/nature-farm-scenery-4nho1u78dzvt1meo.jpg");
+                   width:100%;
+                   height:400px;
+                   background-repeat:no-repeat;
+                   background-size:cover;
+                   background-position:center;
+                   overflow:hidden;
+               }
+               .header h1{
+                   position:absolute;
+                   padding:150px 1000px 500px 650px;
+                   margin:auto;
+                   text-transform:uppercase;
+                   color:#fff;
+                   font-weight:bold;
+                   justify:space-between;
+                   letter-spacing:2px;
+               }
+               .header h3{
+                   font-size: 1.17em;
+                   margin-block-start: 1em;
+                   margin-block-end: 1em;
+                   margin-inline-start: 0px;
+                   margin-inline-end: 0px;
+                   padding:160px 1000px 500px 610px;
+                   justify-content:center;
+                   color:#fff;
+               }
+               .header pre{
+                   white-space-collapse: preserve;
+                   text-wrap: nowrap;
+               }
+               .items{
+                   display:grid;
+                   grid-template-columns:repeat(3, 1fr);
+                   padding:30px 20px;
+                   grid-column-gap:20px;
+                   grid-row-gap:30px;
+               }
+               .item img{
+                   width:100%;
+                   height:300px;
+                   object-fit:cover;
+                   cursor:pointer;
+                   transition:0.2s ease-in-out;
+               }
+               .item img:hover{
+                   transform:scale(1.04);
+               }
+               .item h1{
+                   padding:5px;
+                   text-align:center;
+                   color:#04b833;
+               }
+               .item p{
+                   text-align:center;
+                   justify-content:center;
+               }
+               .item button{
+                   padding:5px 30px;
+                   border:none;
+                   outline:none;
+                   background-color:green;
+                   color:#fff;
+                   cursor:pointer;
+                   border-radius:5px;
+                   font-size:20px;
+                   display:block;
+                   margin:0 auto;
+                   transition:0.2s all;
+               }
+               .item button:hover{
+                   color:#11fa4f;
+                   transform:scale(1.08;)
+               }
+               @media screen and (max-width:1000px){
+                   .items{
+                       grid-template-columns:repeat(2,1fr);
+                   }
+               }
+               @media screen and (max-width:768px){
+                   .items{
+                       grid-template-columns:repeat(1,1fr);
+                   }
+               }
+         </style>
+      </head>
+         <body>
+            <div class="main">
+               <div class="navbar">
+                  <ul>
+                     <a href="#"><li>HomePage</li></a>
+                     <a href="#"><li>About us</li></a>
+                     <a href="#"><li>Services</li></a>
+                     <a href="#"><li>Contact</li></a>
+                     <a href="#"><li>External</li></a>
+                  </ul>
+               </div>
+               <div class="header">
+                  <h1>conquer</h1>
+                  <pre>
+                  <h3><span>Simple</span> <span>Bootstrap</span><span> Template</span></h3>
+                  </pre>
+               </div>
+               <section class="items">
+                    <div class="item" style="background-color:#f0ede9">
+                        <img src="https://i.pinimg.com/originals/d4/2b/60/d42b60311c9d0cfc45b74f9a805f4cec.jpg"width="300px" height="200px;">
+                        <h1>Bootstrap v3.3.6</h1>
+                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, </p>
+                        <button>Button Green</button>
+                    </div>
+
+                    <div class="item" style="background-color:#f0ede9">
+                        <img src="https://images.unsplash.com/photo-1500622944204-b135684e99fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJhbHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80">
+                        <h1 style="color:blue">Responsive Design</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+                        <button></button>
+                    </div>
+
+                    <div class="item" style="background-color:#f0ede9">
+                        <img src="https://media.istockphoto.com/id/1022892932/photo/hand-holding-light-bulb-against-nature-on-green-leaf-with-icons-energy-sources-for-renewable.webp?b=1&s=170667a&w=0&k=20&c=HDrgHE8TxBLX0s8N-Zhzaqb3aX2nkzRgfSdWdpyPdI0=">
+                        <h1>Parallax Layout</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+                        <button></button>
+                    </div>
+
+                    <div class="item" style="background-color:#f0ede9">
+                        <img src="https://iasbaba.com/wp-content/uploads/2015/07/Creative-Guidance-Word-Art.jpg">
+                        <h1>Two column left side</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+                        <button></button>
+                    </div>
+
+                    <div class="item" style="background-color:#f0ede9">
+                        <img src="https://iasbaba.com/wp-content/uploads/2015/12/Monotony.jpg">
+                        <h1>Two column right side</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+                        <button></button>
+                    </div>
+                          
+               </section>
+            </div>
+         </body>
+   </html>
